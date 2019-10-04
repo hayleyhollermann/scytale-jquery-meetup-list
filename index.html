@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <script src="client.js"></script>
+    <title>Scytale-jQuery-Meetups</title>
+</head>
+<body>
+    <h1>Scytale-jQuery-Meetups</h1>
+    <div id="inputFeilds">
+        <input placeholder="New Group" id="groupInput"  />
+        <input placeholder="Next Date" id="dateInput"  />
+        <button id="addMeetup">Add Meetup</button>
+    </div>
+    <br>
+    <br>
+    <div id="tableZone">
+        <table style="width: 100%">
+            <tr id="titleRow">
+                <th class ="topRow" id="groupColumn">Group</th>
+                <th class ="topRow" id="dateColumn">Date</th>
+                <th class ="topRow" id="deleteColumn">Delete</th>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h2>Total Meetups: <span id="meetupCount">VALUE</span></h2>
+    </div>
+
+
+</body>
+</html>
