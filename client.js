@@ -6,6 +6,8 @@ $(document).ready(readyNow);
 
 function deleteButtonClick(){
     console.log('delete'); 
+    $(this).closest('tr').remove();
+    // or $(this).parent().parent().remove();
 }
 
 function addMeetupClick(){
