@@ -3,10 +3,9 @@ let numberOfMeetups = 0;
 
 $(document).ready(readyNow);
 
-function readyNow() {
-    //console.log('we in here!');
-    $('#meetupCount').text(numberOfMeetups);
-    $('#addMeetup').on('click', addMeetupClick)
+
+function deleteButtonClick(){
+    console.log('delete'); 
 }
 
 function addMeetupClick(){
@@ -16,7 +15,12 @@ function addMeetupClick(){
     let group = $('#groupInput').val();
     let date = $('#dateInput').val();
     //appends new row of input to the table
-    $('tbody').append('<tr> <th> ' + group + '</th> <th>' + date + '</th> <th>' + '<button class="delete">DELETE!</button>' + '</th> </tr>');
+    //$('tbody').append('<tr> <td> ' + group + '</td> <td>' + date + '</td> <td>' + '<button class="deleteButton">DELETE!</button>' + '</td> </tr>');
+    $('tbody').append(`
+        <tr> 
+            <td> ${group} </td>
+            <td> ${date} </td>
+            <td> <button class="deleteButton">DELETE!</button> </td>`);
     //console.log(group, date);
     $('#groupInput').val('') //clears input field
     $('#dateInput').val('') //clears input field
@@ -24,10 +28,9 @@ function addMeetupClick(){
 
 
 
-
-
 function readyNow() {
     //console.log('we in here!');
     $('#meetupCount').text(numberOfMeetups);
-    $('#addMeetup').on('click', addMeetupClick)
+    $('#addMeetup').on('click', addMeetupClick);
+    $('tbody').on('click','.deleteButton', deleteButtonClick); //descendant selector
 }
