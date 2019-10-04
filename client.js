@@ -13,20 +13,14 @@ function addMeetupClick(){
     numberOfMeetups ++;
     //console.log('I was clicked!');
     $('#meetupCount').text(numberOfMeetups);
-    //addRow();
-    //$('table').append('<tr></tr>');
     let group = $('#groupInput').val();
     let date = $('#dateInput').val();
+    //appends new row of input to the table
     $('tbody').append('<tr> <th> ' + group + '</th> <th>' + date + '</th> <th>' + '<button class="delete">DELETE!</button>' + '</th> </tr>');
-    //let deleteButton = $('#deleteColumn').attr()
-    console.log(group, date);
-    $('#groupInput').val('')
-    $('#dateInput').val('')
+    //console.log(group, date);
+    $('#groupInput').val('') //clears input field
+    $('#dateInput').val('') //clears input field
 }
-
-/*function addRow(){
-    $('tbody').append('<tr></tr>');
-}*/
 
 
 
